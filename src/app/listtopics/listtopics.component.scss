@@ -1,0 +1,19 @@
+
+.active{
+  background: yellow;
+  color: "#black"
+}
+
+.owl-next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+.owl-prev {
+  left: -2rem;
+}
+
+.owl-next {
+  right: -2rem;
+}

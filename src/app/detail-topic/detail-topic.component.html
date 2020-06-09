@@ -1,0 +1,33 @@
+<app-listtopics></app-listtopics>
+<div *ngFor="let topic of topicList" style="width: 90%; margin-left: 50px">
+  <div *ngIf="topic.id == topicIn.id">
+
+    <mat-grid-list cols="2" rowHeight="400px" [gutterSize]="'20px'"  >
+        <mat-grid-tile >
+          <mat-card>
+            <img [src]="topic.picture_url" [title]="topic.name">
+          </mat-card>
+        </mat-grid-tile>
+      <mat-grid-tile rowhight="400px">
+        <mat-card style="width:650px; height: 400px; margin-top: 20px;">
+          <span class="mat-display-1"
+            style="margin-bottom: 15px; background-color: yellow ; width: 250px;"><strong>{{topic.name}}</strong></span>
+          <br>
+          <br>
+          <p class="mat-h1" style="padding-top: -15px;">{{topic.description}}</p>
+          <p class="mat-title"><strong>Created-by</strong></p>
+          <ul>
+            <li> {{topic.created_by}}</li>
+          </ul>
+          <p class="mat-title"><strong>Topic leaders</strong></p>
+          <ul>
+            <li>{{topic.leaders}}</li>
+          </ul>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+<br>
+<br>
+

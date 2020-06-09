@@ -1,0 +1,43 @@
+<!--
+  mat-tab-group style="margin-left: 50px ; margin-top : 10px;">
+
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let topic of topicList">
+      <ng-template carouselSlide [id]="topic.id">
+        <img [src]="topic.picture_url" [title]="topic.name" style="width:75px; height:75px; border-radius: 50%;">
+        <h2>
+          <a [routerLink]="['/topic/',topic.id]" routerLinkActive="active"> <strong>{{topic.name}}</strong></a>
+        </h2>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+        <img src="/assets/Add.png" style="width:75px; height:75px; border-radius: 50%;">
+        <a mat-flat-button  target="_blank"><strong>ADD TOPIC</strong></a>
+        <a href="#"> </a>
+</div> -->
+
+<div style="margin-left: 50px ; margin-top : 10px;">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let topic of topicList">
+        <ng-template carouselSlide [id]="topic.id">
+          <img [src]="topic.picture_url" [title]="topic.name" style="width:75px; height:75px; border-radius: 50%;">
+          <h2>
+            <a [routerLink]="['/topic/',topic.id]" routerLinkActive="active"> <strong>{{topic.name}}</strong></a>
+          </h2>
+        </ng-template>
+    </ng-container>
+    <ng-template carouselSlide>
+      <img src="/assets/Add.png" style="width:75px; height:75px; border-radius: 50%;">
+      <button mat-flat-button (click) = "openDialog()"> ADD TOPIC</button>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+<!--<div style="margin-left: 650px;"
+<button mat-icon-button  class= "owl-prev" aria-label="Example icon button with a vertical three dot icon">
+<mat-icon>chevron_left</mat-icon>
+</button>
+<button mat-icon-button class ="owl-next" aria-label="Example icon button with a vertical three dot icon">
+<mat-icon>chevron_right</mat-icon>
+</button>
+</div>
+-->
